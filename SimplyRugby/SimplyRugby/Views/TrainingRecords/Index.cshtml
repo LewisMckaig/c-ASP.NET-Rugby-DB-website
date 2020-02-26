@@ -1,0 +1,56 @@
+﻿@model IEnumerable<SimplyRugby.Models.TrainingRecord>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nonPlayer_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.accidents)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nonPlayer_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.accidents)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

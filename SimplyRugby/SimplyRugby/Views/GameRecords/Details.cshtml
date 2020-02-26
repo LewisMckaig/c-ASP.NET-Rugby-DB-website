@@ -1,0 +1,66 @@
+﻿@model SimplyRugby.ViewModels.getCoachName
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GameRecord</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Coach Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.coachName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gr.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gr.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gr.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gr.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gr.firstHalf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gr.firstHalf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gr.secondHalf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gr.secondHalf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gr.date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gr.date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.gr.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

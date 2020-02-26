@@ -1,0 +1,105 @@
+﻿@model IEnumerable<SimplyRugby.Models.Skills>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.player.fName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.standard)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.spin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.front)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.side)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.scrabble)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Drop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.punt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.grubber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Goal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.player.fName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.standard)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.spin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.front)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.side)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.scrabble)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Drop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.punt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.grubber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Goal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

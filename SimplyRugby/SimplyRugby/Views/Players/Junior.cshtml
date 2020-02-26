@@ -1,0 +1,86 @@
+﻿@model IEnumerable<SimplyRugby.Models.Player>
+@{
+    ViewBag.Title = "Junior";
+}
+
+<h2>Junior Team</h2>
+
+@Html.ActionLink("Create New", "CreateJunior")
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SRUnum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phoneNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.doctor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.healthissues)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>]
+            <td>
+                @Html.DisplayFor(modelItem => item.SRUnum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.postCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phoneNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.doctor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.healthissues)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id }) |
+                @Html.ActionLink("Add Guardian", "../Guardians/Create", new { id = item.id })
+            </td>
+        </tr>
+    }
+</table>

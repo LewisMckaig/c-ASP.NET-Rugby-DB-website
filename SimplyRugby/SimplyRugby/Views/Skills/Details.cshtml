@@ -1,0 +1,122 @@
+﻿@model SimplyRugby.Models.Skills
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Skills</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.standard)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.standard)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.spin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.spin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.front)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.front)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.side)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.side)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.scrabble)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.scrabble)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Drop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Drop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.punt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.punt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.grubber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.grubber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Goal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Goal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "/Players/model.team")
+</p>

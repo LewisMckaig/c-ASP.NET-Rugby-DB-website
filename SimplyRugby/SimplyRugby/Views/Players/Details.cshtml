@@ -1,0 +1,256 @@
+﻿@model SimplyRugby.ViewModels.PlayerData
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Player</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.player.fName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player.fName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.player.lName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player.lName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.player.dob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player.dob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.player.address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player.address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.player.postCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player.postCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.player.phoneNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player.phoneNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.player.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.player.doctor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player.doctor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.player.doctorAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player.doctorAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.player.doctorPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player.doctorPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.player.position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player.position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.player.healthissues)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player.healthissues)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.player.team)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player.team)
+        </dd>
+
+    </dl>
+
+
+
+    <table class="table">
+        @if (Model.guardians != null)
+        {
+            foreach (var item in Model.guardians)
+            {
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => item.fName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => item.lName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => item.address)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => item.phone)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => item.relation)
+                    </th>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.lName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.phone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.relation)
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+
+</div>
+<table class="table">
+    @foreach (var item in Model.playerSkills)
+    {
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => item.standard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => item.spin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => item.pop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => item.front)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => item.rear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => item.side)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => item.scrabble)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => item.Drop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => item.punt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => item.grubber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => item.Goal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => item.Date)
+            </th>
+            <th></th>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.standard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.spin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pop)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.front)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.side)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.scrabble)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Drop)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.punt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.grubber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Goal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "/../Skills/Delete", new { id = item.id }) 
+            </td>
+        </tr>
+     }
+    </table>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.player.id }) |
+    @Html.ActionLink("Back to List", Model.player.team) |
+    @Html.ActionLink("Add new Skill Sheet", "/../Skills/Create")
+</p>
